@@ -39,7 +39,7 @@ public class HelloSpringApplication implements CommandLineRunner {
 	}
 
 	public final static String getBanner(String mode) {
-		final String greeting = "Hello from Google Cloud! XDD";
+		final String greeting = "Hello from Google Cloud! XDD 1";
 
 		final String logoBW = 
 		"                                                                                \n"+
