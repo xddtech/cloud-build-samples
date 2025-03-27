@@ -18,9 +18,11 @@ steps:
     entrypoint: mvn
     args: ["test"]
   - name: maven:3-eclipse-temurin-17-alpine
+    dir: maven-example
     entrypoint: mvn
     args: ["package", "-Dmaven.test.skip=true"]
   - name: gcr.io/cloud-builders/docker
+    dir: maven-example
     args: ["build", "-t", "us-central1-docker.pkg.dev/$PROJECT_ID/$_REPO_NAME/hellospring", "--build-arg=JAR_FILE=target/hello-spring-1.0.0.jar", "."]
 logsBucket: 'gs://xdd_cloud_build_log_1'
 #options:
