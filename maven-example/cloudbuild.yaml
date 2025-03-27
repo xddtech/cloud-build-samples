@@ -22,8 +22,8 @@ steps:
   - name: gcr.io/cloud-builders/docker
     args: ["build", "-t", "us-central1-docker.pkg.dev/$PROJECT_ID/$_REPO_NAME/hellospring", "--build-arg=JAR_FILE=target/hello-spring-1.0.0.jar", "."]
 logsBucket: 'gs://xdd_cloud_build_log_1'
-options:
-   service_account: 561080081349-compute@developer.gserviceaccount.com
-   default_logs_bucket_behavior: REGIONAL_USER_OWNED_BUCKET
+#options:
+#   service_account: 561080081349-compute@developer.gserviceaccount.com
+#   default_logs_bucket_behavior: REGIONAL_USER_OWNED_BUCKET
 images: ["us-central1-docker.pkg.dev/$PROJECT_ID/$_REPO_NAME/hellospring"]
 # [END cloudbuild_maven]
